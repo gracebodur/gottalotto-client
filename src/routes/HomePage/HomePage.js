@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import Welcome from '../../components/Welcome/Welcome';
 
 class HomePage extends Component {
-	static contextType = WinnersListContext
+	// static contextType = WinnersListContext
 
 	componentDidMount() {
 

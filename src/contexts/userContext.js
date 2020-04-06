@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import TokenService from "../services/token-service"
 
 const UserContext = React.createContext({
 	user: {},
@@ -17,7 +18,7 @@ export class UserProvider extends Component {
 		super(props)
 		const state = { user: {}, error: null }
 
-		const jwtPayload = TokenService.parseAuthToken()
+		// const jwtPayload = TokenService.parseAuthToken()
 
 		if (jwtPayload)
 			state.user = {

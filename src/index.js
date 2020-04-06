@@ -10,13 +10,13 @@ import { UserProvider } from './contexts/userContext';
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <UserProvider>
-        <GuessListProvider>
-          <GuessProvider>
-            <App />
-          </GuessProvider>
-        </GuessListProvider>
-      </UserProvider>
+      {/* <UserProvider> */}
+      <GuessListProvider>
+        <GuessProvider>
+          <App />
+        </GuessProvider>
+      </GuessListProvider>
+      {/* </UserProvider> */}
     </Router>
   </React.StrictMode>,
   document.getElementById('root')
