@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import AuthApiService from "../../services/auth-api-service";
 import TokenService from "../../services/token-service";
 import { Link } from 'react-router-dom'
+import './LoginForm.css'
 
 class LoginForm extends Component {
 	static defaultProps = {
@@ -53,6 +54,7 @@ class LoginForm extends Component {
 						<label htmlFor="user_name">User Name:</label>
 						<input
 							type="text"
+							placeholder="Enter User Name"
 							name="user_name"
 							value={this.state.user_name}
 							required
@@ -63,6 +65,7 @@ class LoginForm extends Component {
 						<label htmlFor="password">Password:</label>
 						<input
 							type="password"
+							placeholder="Enter Password"
 							name="password"
 							value={this.state.password}
 							required

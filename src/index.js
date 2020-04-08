@@ -5,7 +5,7 @@ import './index.css';
 import App from './App';
 import { GuessProvider } from './contexts/guessContext';
 import { GuessListProvider } from './contexts/guessListContext';
-import { UserProvider } from './contexts/userContext';
+// import { UserProvider } from './contexts/userContext';
 
 ReactDOM.render(
   <React.StrictMode>
