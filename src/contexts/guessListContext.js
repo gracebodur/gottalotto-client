@@ -15,7 +15,7 @@ export default GuessListContext;
 
 export class GuessListProvider extends Component {
 	state = {
-		guessList: {},
+		guessList: [],
 		error: null
 	};
 

@@ -6,7 +6,12 @@ import GuessListContext from '../../contexts/guessListContext'
 
 class GuessListPage extends Component {
 	static contextType = GuessListContext;
-
+	componentDidMount() {
+		this.context.clearError();
+		GuessesApiService.getAllGuesses()
+			.then(this.context.setGuessList)
+			.catch(this.context.setError);
+	}
 	componentDidMount() {
 		this.context.clearError();
 		GuessesApiService.getAllGuesses()
