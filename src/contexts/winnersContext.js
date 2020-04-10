@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 
 const WinnersContext = React.createContext({
-	winner: {},
+	winners: [],
 	error: null,
 	setError: () => { },
 	clearError: () => { },
-	setWinner: () => { },
-	clearWinner: () => { },
+	setWinners: () => { },
+	clearWinners: () => { },
 	setReviews: () => { },
 	addReview: () => { }
 });
@@ -15,7 +15,7 @@ export default WinnersContext;
 
 export class WinnersProvider extends Component {
 	state = {
-		winner: {},
+		winners: [],
 		error: null
 	};
 
@@ -27,22 +27,22 @@ export class WinnersProvider extends Component {
 		this.setState({ error: null });
 	};
 
-	setWinner = Winner => {
-		this.setState({ Winner });
+	setWinners = winners => {
+		this.setState({ winners });
 	};
 
-	clearWinner = () => {
-		this.setWinner({});
+	clearWinners = () => {
+		this.setWinners({});
 	};
 
 	render() {
 		const value = {
-			winner: this.state.winner,
+			winners: this.state.winners,
 			error: this.state.error,
 			setError: this.setError,
 			clearError: this.clearError,
-			setWinner: this.setWinner,
-			clearWinner: this.clearWinner
+			setWinners: this.setWinners,
+			clearWinners: this.clearWinners
 		};
 		return (
 			<WinnersContext.Provider value={value}>

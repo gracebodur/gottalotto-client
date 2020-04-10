@@ -1,9 +1,9 @@
-// import config from '../config'
-// import TokenService from '../services/token-service'
+import config from '../config'
+import TokenService from '../services/token-service'
 
 const WinnersApiService = {
 	getAllWinners() {
-		return fetch(`${config.API_ENDPOINT}/winners`, {
+		return fetch(`${config.API_ENDPOINT}/guesses/winners`, {
 			headers: {
 				'authorization': `bearer ${TokenService.getAuthToken()}`,
 			},
@@ -26,8 +26,8 @@ const WinnersApiService = {
 					: res.json()
 			)
 	},
-	getWinnersMessage(winner_id) {
-		return fetch(`${config.API_ENDPOINT}/winners/${project_id}/messages`, {
+	getWinnerById(week_id) {
+		return fetch(`${config.API_ENDPOINT}/winner/${week_id}`, {
 			headers: {
 				'authorization': `bearer ${TokenService.getAuthToken()}`,
 			},

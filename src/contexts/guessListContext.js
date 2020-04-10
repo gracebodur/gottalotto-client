@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 const GuessListContext = React.createContext({
-	guessList: {},
+	guessList: [],
 	error: null,
 	setError: () => { },
 	clearError: () => { },

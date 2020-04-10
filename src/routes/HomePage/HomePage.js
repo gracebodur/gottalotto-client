@@ -4,13 +4,20 @@ import Welcome from '../../components/Welcome/Welcome';
 import WinnersList from '../../components/WinnersList/WinnersList'
 import Nav from '../../components/Nav/Nav';
 import TokenService from '../../services/token-service'
+import WinnersApiService from '../../services/winners-api-service'
+import WinnersContext from '../../contexts/winnersContext'
 
 class HomePage extends Component {
-	// static contextType = WinnersListContext
+	static contextType = WinnersContext
 
 	componentDidMount() {
-
+		this.context.clearError();
+		WinnersApiService.getAllWinners()
+			.then(this.context.setWinners)
+			.catch(this.context.setError)
 	}
+
+
 
 	render() {
 		return (
@@ -27,6 +34,7 @@ class HomePage extends Component {
 					{TokenService.hasAuthToken()
 						? <WinnersList />
 						: <Welcome />}
+
 					<h3>Ready to submit your own guess?</h3>
 					<Link to='/guess'>Guess!</Link>
 

@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { Switch, Route } from "react-router-dom";
 import './App.css';
 
-
-import Nav from './components/Nav/Nav'
 import HomePage from './routes/HomePage/HomePage'
 import LoginPage from './routes/LoginPage/LoginPage';
 import RegisterPage from './routes/RegisterPage/RegisterPage';
@@ -11,17 +9,18 @@ import SubmitGuessPage from './routes/SubmitGuessPage/SubmitGuessPage';
 import GuessListPage from './routes/GuessListPage/GuessListPage';
 import Footer from './components/Footer/Footer';
 
-
 import PrivateRoute from "../src/Utils/PrivateRoute"
 import PublicOnlyRoute from "../src/Utils/PublicOnlyRoute";
 
+import WinnersContext from '../src/contexts/winnersContext'
+import UserContext from '../src/contexts/userContext'
+import GuessListContext from '../src/contexts/guessListContext'
+
 class App extends Component {
+
   render() {
     return (
       <div>
-        {/* <header>
-          <Nav />
-        </header> */}
         <Switch>
           <Route exact path='/' component={HomePage} />
           <PublicOnlyRoute path='/login' component={LoginPage} />

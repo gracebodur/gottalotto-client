@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Guess from '../Guess/Guess'
 import GuessListContext from '../../contexts/guessListContext'
-import GuessesApiService from '../../services/guesses-api-service'
 
 class GuessList extends Component {
 	static contextType = GuessListContext;

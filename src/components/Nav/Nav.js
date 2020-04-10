@@ -20,7 +20,7 @@ class Nav extends Component {
     }
     renderLogin() {
         return (
-            <div className='zone sticky main-nav'>
+            <div>
                 <Link className='link' to='/login'>Login</Link>
                 <Link className='link' to='/register'>Register</Link>
             </div>

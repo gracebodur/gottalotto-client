@@ -38,7 +38,9 @@ const GuesssesApiService = {
 					: res.json()
 			)
 	},
-	postGuesses(user_id, week_id, guess_1, guess_2, guess_3, guess_4, guess_5, power_ball, message) {
+
+	postGuess(data) {
+		const { user_id, week_id, guess_1, guess_2, guess_3, guess_4, guess_5, power_ball, message } = data
 		return fetch(`${config.API_ENDPOINT}/guesses`, {
 			method: 'POST',
 			headers: {

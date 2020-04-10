@@ -5,18 +5,22 @@ import './index.css';
 import App from './App';
 import { GuessProvider } from './contexts/guessContext';
 import { GuessListProvider } from './contexts/guessListContext';
+import { WinnersProvider } from './contexts/winnersContext';
+import { UserProvider } from './contexts/userContext';
 // import { UserProvider } from './contexts/userContext';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      {/* <UserProvider> */}
-      <GuessListProvider>
-        <GuessProvider>
-          <App />
-        </GuessProvider>
-      </GuessListProvider>
-      {/* </UserProvider> */}
+      <UserProvider>
+        <GuessListProvider>
+          <GuessProvider>
+            <WinnersProvider>
+              <App />
+            </WinnersProvider>
+          </GuessProvider>
+        </GuessListProvider>
+      </UserProvider>
     </Router>
   </React.StrictMode>,
   document.getElementById('root')
