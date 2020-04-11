@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 import GuessesApiService from '../../services/guesses-api-service'
 import UserContext from '../../contexts/userContext'
+import WeeksApiService from '../../services/weeks-api-service'
 
 class SubmitGuessForm extends Component {
 	static contextType = UserContext
-
 	state = {
+		user_id: null,
+		week_id: null,
 		guess_1: "",
 		guess_2: "",
 		guess_3: "",
@@ -14,15 +16,25 @@ class SubmitGuessForm extends Component {
 		power_ball: "",
 		message: ""
 	}
+	componentDidMount() {
+		WeeksApiService.getCurrentWeek()
+			.then(week => {
+				this.setState({ week_id: week.week_id })
+			})
+			.catch()
+		this.setState({
+			user_id: this.context.user.user_id
+		})
+	}
 
 	handleSubmit = (ev, data) => {
 		ev.preventDefault();
 		GuessesApiService.postGuess(data)
 			.then()
 			.catch(this.context.setError);
-		const { location, history } = this.props;
-		const destination = (location.state || {}).from || "/";
-		history.push(destination);
+		// const { location, history } = this.props;
+		// const destination = (location.state || {}).from || "/";
+		// history.push(destination);
 	};
 
 	handleChange = event => {
@@ -33,16 +45,16 @@ class SubmitGuessForm extends Component {
 	};
 
 	render() {
-		const { guess_1, guess_2, guess_3, guess_4, guess_5, power_ball, message } = this.state;
-		console.log('context', this.context)
-
+		const { guess_1, guess_2, guess_3, guess_4, guess_5, power_ball, message, week_id } = this.state;
+		console.log('weekID', week_id)
 		return (
 			<div>
 				<form onSubmit={event => {
-					const data = this.state;
+					const data = this.state
 					this.handleSubmit(event, data);
 				}}>
 					<legend>Select your 6 numbers</legend>
+					<h2>Submit your guess for week {week_id}</h2>
 					<p>{guess_1}, {guess_2}, {guess_3}, {guess_4}, {guess_5}, {power_ball}</p>
 					<p>{message}</p>
 					<input type="number" value={guess_1} name='guess_1' min='1' max='69' onChange={this.handleChange} required />
@@ -61,7 +73,7 @@ class SubmitGuessForm extends Component {
 						required />
 					<button>Submit Guess!</button>
 				</form>
-			</div>
+			</div >
 		)
 	}
 

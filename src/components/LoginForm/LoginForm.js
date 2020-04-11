@@ -3,14 +3,15 @@ import AuthApiService from "../../services/auth-api-service";
 import TokenService from "../../services/token-service";
 import { Link } from 'react-router-dom'
 import './LoginForm.css'
+import UserContext from "../../contexts/userContext";
 
 class LoginForm extends Component {
+	static contextType = UserContext
 	static defaultProps = {
 		onLoginSuccess: () => { }
 	}
 
 	state = { error: null };
-
 
 
 	// onLoginSuccess = () => {
@@ -28,9 +29,12 @@ class LoginForm extends Component {
 			password: password.value
 		})
 			.then(res => {
+				const { dbUser } = res
+				console.log('dbuser: ', dbUser)
 				user_name.value = "";
 				password.value = "";
 				TokenService.saveAuthToken(res.authToken);
+				this.context.setUser(dbUser)
 				this.props.onLoginSuccess();
 			})
 			.catch(res => {

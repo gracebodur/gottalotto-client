@@ -17,8 +17,6 @@ class HomePage extends Component {
 			.catch(this.context.setError)
 	}
 
-
-
 	render() {
 		return (
 			<div>

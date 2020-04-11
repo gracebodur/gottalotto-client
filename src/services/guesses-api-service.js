@@ -48,8 +48,8 @@ const GuesssesApiService = {
 				'authorization': `bearer ${TokenService.getAuthToken()}`,
 			},
 			body: JSON.stringify({
-				user_id: user_id,
-				week_id: week_id,
+				user_id,
+				week_id,
 				guess_1,
 				guess_2,
 				guess_3,
