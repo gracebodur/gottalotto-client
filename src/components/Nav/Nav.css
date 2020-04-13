@@ -1,4 +1,5 @@
 .sticky {
+    position: fixed;
     top: 0;
     width: 100%;
 }
@@ -7,7 +8,7 @@
     display: flex;
     list-style: none;
     margin: 0;
-    background-color: #444;
+    background-color: #F29C00;
 }
 
 .right {
@@ -15,10 +16,10 @@
 }
 
 .link {
-    color: #f5f5f6;
+    color: #444444;
     text-decoration: none;
     font-size: 0.7em;
-    padding: 20px;
+    padding: 15px;
 }
 
 @media only screen and (max-width: 600px) {
