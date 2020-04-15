@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import avatar from '../../img/avatar.svg'
+import avatar from '../../img/winner_avatar.png'
 import Flippy, { FrontSide, BackSide } from 'react-flippy'
 import './Winner.css'
 
