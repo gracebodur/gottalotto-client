@@ -1,75 +1,72 @@
-.wave{
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	height: 90%;
-	z-index: -1;
+.wave {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 90%;
+  z-index: -1;
 }
 
 form {
-	border: 3px solid #f1f1f1;
-	max-width: 100%;
+  border: 3px solid #f1f1f1;
+  max-width: 100%;
 }
 
 .login {
-	padding: 16px;
-	height: auto;
-	margin: 0 auto;
-	width: 70%;
+  padding: 16px;
+  height: auto;
+  margin: 0 auto;
+  width: 70%;
 }
 
 .login h2 {
-	padding: 50px;
-	text-align: center;
-	letter-spacing: 0.2em;
+  padding: 50px;
+  text-align: center;
+  letter-spacing: 0.2em;
 }
 
 .loginText {
-	text-align: center;
-	font-size: 1.5em;
-	letter-spacing: 0.1em;
-   	margin-top: 10px;
+  text-align: center;
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+  margin-top: 10px;
 }
 
 .imgcontainer {
-	text-align: center;
-	margin: 24px 0 12px 0;
+  text-align: center;
+  margin: 24px 0 12px 0;
 }
 
 img.avatar {
-	width: 20%;
-	border-radius: 50%;
+  width: 20%;
+  border-radius: 50%;
 }
 
 .formItem {
-	 padding: 16px;
-	letter-spacing: 0.1em;
-	font-weight: 800; 
+  padding: 16px;
+  letter-spacing: 0.1em;
+  font-weight: 800;
 }
 
-input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-	box-sizing: border-box;
-	letter-spacing: 0.2em;
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  letter-spacing: 0.2em;
 }
 
 .login-btn {
-	margin: 0 auto;
-	display: block;
-}
-
-button {
-	width: 30%;
+  margin: 0 auto;
+  display: block;
 }
 
 .aButton,
 button {
   color: #444444 !important;
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
   text-transform: uppercase;
   font-size: 1em;
   font-weight: 600;
@@ -83,10 +80,9 @@ button {
   transition: all 0.3s ease 0s;
 }
 
-
 .aButton:hover,
 button:hover {
-	background-color:#5BE0FF;
+  background-color: #5be0ff;
   border-radius: 15px;
   border-color: #571717 !important;
   transition: all 0.3s ease 0s;
@@ -94,7 +90,5 @@ button:hover {
 }
 
 .container-login {
-	letter-spacing: 0.2em;
+  letter-spacing: 0.2em;
 }
-
-

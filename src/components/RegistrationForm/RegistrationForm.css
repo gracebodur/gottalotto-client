@@ -1,60 +1,57 @@
 form {
-	border: 3px solid #f1f1f1;
-	max-width: 100%;
+  border: 3px solid #f1f1f1;
+  max-width: 100%;
 }
 
 .register {
-    padding: 16px;
-	height: auto;
-	margin: 0 auto;
-	width: 70%;
+  padding: 16px;
+  height: auto;
+  margin: 0 auto;
+  width: 70%;
 }
 
 .register h1 {
-    padding: 50px;
-	text-align: center;
-	letter-spacing: 0.2em;
+  padding: 50px;
+  text-align: center;
+  letter-spacing: 0.2em;
 }
 
 .registerText {
-	font-size: 1.5em;
-	letter-spacing: 0.1em;
-   	margin-top: 10px;
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+  margin-top: 10px;
 }
 
 .registerText p {
-    text-align: center;
+  text-align: center;
 }
 
 .registerItem {
-    padding: 16px;
-   letter-spacing: 0.1em;
-   font-weight: 800; 
+  padding: 16px;
+  letter-spacing: 0.1em;
+  font-weight: 800;
 }
 
-input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-	box-sizing: border-box;
-	letter-spacing: 0.2em;
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  letter-spacing: 0.2em;
 }
 
 .registerbtn {
-    margin: 0 auto;
-	display: block;
-}
-
-button {
-	width: 30%;
+  margin: 0 auto;
+  display: block;
 }
 
 .aButton,
 button {
   color: #444444 !important;
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
   text-transform: uppercase;
   font-size: 1em;
   font-weight: 600;
@@ -67,16 +64,15 @@ button {
   transition: all 0.3s ease 0s;
 }
 
-
 .aButton:hover,
 button:hover {
-    background-color:#5BE0FF;
-    border-color: #571717 !important;
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-    border-radius: 15px;
+  background-color: #5be0ff;
+  border-color: #571717 !important;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  border-radius: 15px;
 }
 
 .container-register {
-	letter-spacing: 0.2em;
+  letter-spacing: 0.2em;
 }

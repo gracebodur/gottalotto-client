@@ -8,15 +8,15 @@ import './Welcome.css'
 class Welcome extends Component {
 	render() {
 		return (
-			<main>
-			<div className='container zone'><img class='cover' src={cover} alt='lottery-balls'/></div>
-				<div className='zone grid-wrapper'>
+			<main className="welcomeMain">
+				<div className='container zone'><img class='cover' src={cover} alt='lottery-balls' /></div>
+				<div className='zone grid-wrapper '>
 					<div className='box zone'>
 						<img src={green_ball} alt='green lottery ball' />
 						<p className='cardContent'>Veniam occaecat ullamco ut officia deserunt tempor.</p>
 					</div>
 					<div className='box zone'>
-						<img src={yellow_ball} alt='yellow lottery ball'/>
+						<img src={yellow_ball} alt='yellow lottery ball' />
 						<p className='cardContent'>Ex eiusmod ad laborum sunt fugiat adipisicing elit duis esse amet.</p>
 					</div>
 					<div className='box zone'>
@@ -31,6 +31,5 @@ class Welcome extends Component {
 
 export default Welcome
 
-	
-	
-	
+
+
