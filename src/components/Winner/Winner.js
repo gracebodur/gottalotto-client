@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import avatar from '../../img/avatar.png'
+import avatar from '../../img/avatar.svg'
 
 class Winner extends Component {
 	render() {
