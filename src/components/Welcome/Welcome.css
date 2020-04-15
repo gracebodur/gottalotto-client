@@ -1,35 +1,35 @@
 .container {
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 70vh;
+    padding: 20px;
+    margin: 10px;
 }
 
 .cover {
-    width: 20rem;
+    width: 50em;
 }
 
+/*GRID*/
 .grid-wrapper {
     display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     grid-gap: 20px;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1 fr));
+}
+
+.box {
+    background-color: rgb(77, 73, 73);
+    padding: 130px;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .box > img {
     width: 100%;
     height: auto;
-}
-
-.box {
-    background-color: #0E284D;
-    padding: 130px;
-    margin: 20px;
-}
-
-.box:hover {
-    -webkit-transform: rotate(-7deg);
-    -moz-transform: rotate(-7deg);
-    -o-transform: rotate(-7deg);
-    transform: rotate(-7deg);
 }
 

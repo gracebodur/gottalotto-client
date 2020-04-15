@@ -6,6 +6,7 @@ import Nav from '../../components/Nav/Nav';
 import TokenService from '../../services/token-service'
 import WinnersApiService from '../../services/winners-api-service'
 import WinnersContext from '../../contexts/winnersContext'
+import './HomePage.css'
 
 class HomePage extends Component {
 	static contextType = WinnersContext
@@ -23,7 +24,8 @@ class HomePage extends Component {
 				<header>
 					<Nav />
 				</header>
-				<main>
+				<main> 
+					<div className='zone grid-wrapper'>
 					{/* !isLoggedIn ?  Welcome : "" */}
 					{/* Most recent drawing and winner and winner's message */}
 					{/* isLoggedIn ? WinnersList : ""  */}
@@ -35,7 +37,7 @@ class HomePage extends Component {
 
 					<h3>Ready to submit your own guess?</h3>
 					<Link to='/guess'>Guess!</Link>
-
+					</div>
 				</main>
 			</div >
 		)
