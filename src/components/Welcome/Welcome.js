@@ -9,20 +9,22 @@ class Welcome extends Component {
 	render() {
 		return (
 			<main>
-			<div className='container zone'><img class='cover' src={cover} alt='lottery-balls'/></div>
-				<div className='zone grid-wrapper'>
-					<div className='box zone'>
+			<div className='container'><img class='cover' src={cover} alt='lottery-balls'/></div>
+				<div className='grid-wrapper'>
+					<section>
+					<div className='box'>
 						<img src={green_ball} alt='green lottery ball' />
 						<p className='cardContent'>Veniam occaecat ullamco ut officia deserunt tempor.</p>
 					</div>
-					<div className='box zone'>
+					<div className='box'>
 						<img src={yellow_ball} alt='yellow lottery ball'/>
 						<p className='cardContent'>Ex eiusmod ad laborum sunt fugiat adipisicing elit duis esse amet.</p>
 					</div>
-					<div className='box zone'>
+					<div className='box'>
 						<img src={red_ball} alt='lottery ball' />
 						<p className='cardContent'>Laboris sit laboris dolore do deserunt fugiat veniam dolore deserunt consectetur nisi esse velit.</p>
 					</div>
+					</section>
 				</div>
 			</main>
 		)
