@@ -1,0 +1,18 @@
+section {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+}
+
+.Winner {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    color: #FFF;
+    font-size: 30px;
+  
+}
+
+.flippy-container {
+    margin-bottom: 20px;
+  }
