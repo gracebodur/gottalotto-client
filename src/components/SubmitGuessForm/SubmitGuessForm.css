@@ -19,7 +19,7 @@
     margin: 0 0 2em;
 }
 
-.body input[type="number"] {
+/* .body input[type="number"] {
     -moz-appearance: textfield;
 }
 
@@ -27,7 +27,7 @@
 .body input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
-}
+} */
 
 .body .pt_Quantity {
     display: inline-block;
