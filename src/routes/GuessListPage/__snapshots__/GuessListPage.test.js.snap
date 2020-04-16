@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GuessListPage component renders a GuessListPage by default 1`] = `undefined`;
+
+exports[`GuessListPage component renders the GuessListPage given props 1`] = `undefined`;

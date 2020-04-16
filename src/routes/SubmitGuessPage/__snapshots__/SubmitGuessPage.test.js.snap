@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SubmitGuessPage component renders a SubmitGuessPage by default 1`] = `undefined`;
+
+exports[`SubmitGuessPage component renders the SubmitGuessPage given props 1`] = `undefined`;
