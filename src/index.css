@@ -33,7 +33,7 @@ a:hover {
     outline: none;
 }
 
-a,
+/* a,
 button {
     -webkit-transition: 0.3s;
     transition: 0.3s
@@ -42,7 +42,7 @@ button {
 a {
     color: #2c3e50;
     font-size: 14px
-}
+} */
 
 h1,
 h2,
