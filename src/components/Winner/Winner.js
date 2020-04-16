@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import avatar from '../../img/avatar.png'
 
 class Winner extends Component {
 	render() {
@@ -6,7 +7,7 @@ class Winner extends Component {
 		return (
 			<section className='winnerList'>
 				<div className='winnerItem container'>
-					<img src='https://via.placeholder.com/75' />
+					<img src={avatar} alt='avatar' />
 					<h3 className='winnerName'>{user_name}</h3>
 					<h3 className='winnerNumbers'>{guess_1}, {guess_2}, {guess_3}, {guess_4}, {guess_5}, PB: {power_ball}</h3>
 					<p className='winnerMessage'>{message}</p>

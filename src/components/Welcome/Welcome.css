@@ -1,0 +1,40 @@
+section {
+    display: flex;
+    flex-direction: row;
+}
+
+.welcome {
+    font-size: 2em;
+    padding-top: 50px;
+    color:#003F5A;
+}
+
+.cardContent {
+    color: white;
+    font-weight: 500px;
+    font-size: .5em;
+}
+
+.box {
+    background-color: #003F5A;
+    padding: 100px;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.box > img {
+    width: 100%;
+    height: auto;
+}
+
+.one,
+.two,
+.three {
+    flex: 1;
+}
+
+
+
