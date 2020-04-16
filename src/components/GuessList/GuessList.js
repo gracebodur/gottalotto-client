@@ -14,6 +14,7 @@ class GuessList extends Component {
 	}
 	render() {
 		const { error } = this.context;
+		
 		return (
 			<section>
 				<h2>Everyone else's guesses:</h2>

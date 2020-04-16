@@ -4,6 +4,8 @@ import Nav from '../../components/Nav/Nav';
 import GuessesApiService from '../../services/guesses-api-service'
 import GuessListContext from '../../contexts/guessListContext'
 
+// import Scroll from '../../components/Scroll/Scroll'
+
 class GuessListPage extends Component {
 	static contextType = GuessListContext;
 
@@ -20,7 +22,9 @@ class GuessListPage extends Component {
 				<header>
 					<Nav />
 				</header>
-				<GuessList />
+				{/* <Scroll> */}
+					<GuessList />
+				{/* </Scroll> */}
 			</div>
 		)
 	}

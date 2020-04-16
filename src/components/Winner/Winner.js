@@ -9,7 +9,7 @@ class Winner extends Component {
 		return (
 			<section className='Winner'>
 			 <div style={{ display: 'flex', flex: '1 0 200px', justifyContent: 'space-around', 'flex-wrap': 'wrap' }}>
-			<Flippy className='flippy-container'
+			<Flippy
 				flipOnHover={ true }
 				flipDirection='vertical'
 				style={{ width: '300px', height: '400px' }} 
@@ -19,7 +19,7 @@ class Winner extends Component {
 				display: 'flex',
         		alignItems: 'center',
         		flexDirection: 'column'}} >
-				<img src={avatar} alt='avatar' style={{ maxWidth: '100%', maxHeight: '100%'  }} />
+				<img src={avatar} alt='avatar' />
 					{user_name}
 				<span 
 				className='winnerName'
