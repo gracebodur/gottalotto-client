@@ -3,6 +3,7 @@ import AuthApiService from "../../services/auth-api-service";
 import TokenService from "../../services/token-service";
 import { Link } from 'react-router-dom'
 import './LoginForm.css'
+import avatar from '../../img/avatar.svg'
 import UserContext from "../../contexts/userContext";
 
 class LoginForm extends Component {
@@ -54,6 +55,10 @@ class LoginForm extends Component {
 				</div>
 				<form className="loginForm" onSubmit={this.handleSubmitJwtAuth}>
 					<div role="alert">{error && <p className="red">{error}</p>}</div>
+					<div className="imgcontainer">
+    					<img src={avatar} alt="Avatar" className="avatar"></img>
+  					</div>
+
 					<div className="formItem">
 						<label htmlFor="user_name">User Name:</label>
 						<input
@@ -76,10 +81,10 @@ class LoginForm extends Component {
 						/>
 					</div>
 					<br />
-					<button type="submit">Login</button>
+					<button type="submit" className='login-btn'>Login</button>
 				</form>
 
-				<div className="container login">
+				<div className="container-login">
 					<p>Need to create an account? <Link to='/register'>Register</Link></p>
 					<Link to="/" className="aButton">
 						Go Back Home
