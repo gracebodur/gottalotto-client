@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WinnersList component renders a WinnersList by default 1`] = `undefined`;
+
+exports[`WinnersList component renders the WinnersList given props 1`] = `undefined`;

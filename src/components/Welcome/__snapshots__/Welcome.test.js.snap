@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Welcome component renders a Welcome by default 1`] = `undefined`;
+
+exports[`Welcome component renders the Welcome given props 1`] = `undefined`;

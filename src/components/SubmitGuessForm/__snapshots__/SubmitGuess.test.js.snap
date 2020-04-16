@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SubmitGuessForm component renders a SubmitGuessForm by default 1`] = `undefined`;
+
+exports[`SubmitGuessForm component renders the SubmitGuessForm given props 1`] = `undefined`;

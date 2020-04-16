@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Guess component renders a Guess by default 1`] = `undefined`;
+
+exports[`Guess component renders the Guess given props 1`] = `undefined`;
