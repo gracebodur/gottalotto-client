@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import Guess from '../Guess/Guess'
 import GuessListContext from '../../contexts/guessListContext'
 
+import './GuessList.css'
+
 class GuessList extends Component {
 	static contextType = GuessListContext;
 
@@ -17,13 +19,8 @@ class GuessList extends Component {
 		
 		return (
 			<section>
-				<h2>Everyone else's guesses:</h2>
-				{error ? (
-					<p className="red">There was an error, try again</p>
-				) : (
-						this.renderGuesses()
-					)}
-				<a href='https://www.powerball.com/games/home'><p>Power Ball Official Website</p></a>
+				{error ? ( <p className="red">There was an error, try again</p>) 
+				: (this.renderGuesses())}
 			</section>
 		)
 	}

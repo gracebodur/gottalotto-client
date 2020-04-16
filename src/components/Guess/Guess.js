@@ -11,7 +11,7 @@ class Guess extends Component {
 			 <div style={{ display: 'flex', flex: '1 0 200px', justifyContent: 'space-around', 'flex-wrap': 'wrap' }}>
 			<Flippy
 				flipOnHover={ true }
-				flipDirection='vertical'
+				flipDirection='horizontal'
 				style={{ width: '300px', height: '400px' }} 
 			>
 			<FrontSide style={{ 
