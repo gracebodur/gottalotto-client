@@ -1,33 +1,23 @@
 section {
     display: flex;
     flex-direction: row;
-    padding: 15px;
 }
 
-.container {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    margin: 10px;
+.welcome {
+    font-size: 2em;
+    padding-top: 50px;
+    color:#003F5A;
 }
 
-.cover {
-    width: 50em;
-}
-
-
-/*GRID*/
-.grid-wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    grid-gap: 20px;
+.cardContent {
+    color: white;
+    font-weight: 500px;
+    font-size: .5em;
 }
 
 .box {
-    background-color: rgb(77, 73, 73);
-    padding: 130px;
+    background-color: #003F5A;
+    padding: 100px;
     margin: 20px;
     display: flex;
     flex-direction: row;
@@ -39,4 +29,12 @@ section {
     width: 100%;
     height: auto;
 }
+
+.one,
+.two,
+.three {
+    flex: 1;
+}
+
+
 

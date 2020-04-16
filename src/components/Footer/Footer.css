@@ -1,9 +1,9 @@
 footer {
-    background-color: #F09A00;
-    color: #444444;
+    background-color: #DE6600;
+    color:#003F5A;
 }
 
-.main {
+.footer-content {
     display: flex;
     list-style: none;
     margin: 0;
@@ -11,15 +11,16 @@ footer {
 
 .footer-right {
     margin-right: auto;
-    color: #444444;
+    color: #003F5A;
     cursor: auto;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 .footer-link {
     text-decoration: none;
     font-size: 0.7em;
-    padding: 30px
+    margin: 0 auto;
+    padding: 10px
 }
 
 @media only screen and (max-width: 600px) {

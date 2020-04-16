@@ -8,7 +8,7 @@
     display: flex;
     list-style: none;
     margin: 0;
-    background-color: #F29C00;
+    background-color: #DE6600;
 }
 
 .right {
@@ -16,10 +16,11 @@
 }
 
 .link {
-    color: #444444;
+    color:#003F5A;
     text-decoration: none;
     font-size: 0.7em;
     padding: 15px;
+    letter-spacing: 2px;
 }
 
 @media only screen and (max-width: 600px) {
