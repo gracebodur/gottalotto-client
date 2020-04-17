@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import GuessesApiService from '../../services/guesses-api-service'
 import UserContext from '../../contexts/userContext'
 import WeeksApiService from '../../services/weeks-api-service'
+import './SubmitGuessForm.css'
 
 class SubmitGuessForm extends Component {
 	static contextType = UserContext
@@ -53,16 +54,31 @@ class SubmitGuessForm extends Component {
 					const data = this.state
 					this.handleSubmit(event, data);
 				}}>
-					<legend>Select your 6 numbers</legend>
-					<h2>Submit your guess for week {week_id}</h2>
-					<p>{guess_1}, {guess_2}, {guess_3}, {guess_4}, {guess_5}, {power_ball}</p>
-					<p>{message}</p>
-					<input type="number" value={guess_1} name='guess_1' min='1' max='69' onChange={this.handleChange} required />
+					<div class="body">
+						<h1>Select your 6 numbers</h1>
+						<h2>Submit your guess for week {week_id}</h2>
+
+						<p>{guess_1}, {guess_2}, {guess_3}, {guess_4}, {guess_5}, {power_ball}</p>
+						<p>{message}</p>
+					<div class="pt_Quantity">
+					<input 
+						type="number" 
+						value={guess_1} 
+						name='guess_1' 
+						min='1' 
+						max='69' 
+						onChange={this.handleChange} 
+						required 
+					/>
+
 					<input type="number" value={guess_2} name='guess_2' min='1' max='69' onChange={this.handleChange} required />
 					<input type="number" value={guess_3} name='guess_3' min='1' max='69' onChange={this.handleChange} required />
 					<input type="number" value={guess_4} name='guess_4' min='1' max='69' onChange={this.handleChange} required />
 					<input type="number" value={guess_5} name='guess_5' min='1' max='69' onChange={this.handleChange} required />
 					<input type="number" value={power_ball} name='power_ball' min='1' max='26' onChange={this.handleChange} required />
+					</div>
+					</div >
+
 					<textarea
 						type="text"
 						value={message}

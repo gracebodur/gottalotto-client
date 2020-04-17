@@ -1,0 +1,13 @@
+section {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+}
+
+.guesslist-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    color: #FFF;
+    font-size: 30px;
+}
