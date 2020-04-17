@@ -12,9 +12,6 @@ import Footer from './components/Footer/Footer';
 import PrivateRoute from "../src/Utils/PrivateRoute"
 import PublicOnlyRoute from "../src/Utils/PublicOnlyRoute";
 
-import WinnersContext from '../src/contexts/winnersContext'
-import UserContext from '../src/contexts/userContext'
-import GuessListContext from '../src/contexts/guessListContext'
 
 class App extends Component {
 

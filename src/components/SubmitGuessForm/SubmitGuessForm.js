@@ -21,6 +21,7 @@ class SubmitGuessForm extends Component {
 		WeeksApiService.getCurrentWeek()
 			.then(week => {
 				this.setState({ week_id: week.week_id })
+				// console.log(week.week_id)
 			})
 			.catch()
 		this.setState({
@@ -60,23 +61,23 @@ class SubmitGuessForm extends Component {
 
 						<p>{guess_1}, {guess_2}, {guess_3}, {guess_4}, {guess_5}, {power_ball}</p>
 						<p>{message}</p>
-					<div class="pt_Quantity">
-					<input 
-						type="number" 
-						value={guess_1} 
-						name='guess_1' 
-						min='1' 
-						max='69' 
-						onChange={this.handleChange} 
-						required 
-					/>
+						<div class="pt_Quantity">
+							<input
+								type="number"
+								value={guess_1}
+								name='guess_1'
+								min='1'
+								max='69'
+								onChange={this.handleChange}
+								required
+							/>
 
-					<input type="number" value={guess_2} name='guess_2' min='1' max='69' onChange={this.handleChange} required />
-					<input type="number" value={guess_3} name='guess_3' min='1' max='69' onChange={this.handleChange} required />
-					<input type="number" value={guess_4} name='guess_4' min='1' max='69' onChange={this.handleChange} required />
-					<input type="number" value={guess_5} name='guess_5' min='1' max='69' onChange={this.handleChange} required />
-					<input type="number" value={power_ball} name='power_ball' min='1' max='26' onChange={this.handleChange} required />
-					</div>
+							<input type="number" value={guess_2} name='guess_2' min='1' max='69' onChange={this.handleChange} required />
+							<input type="number" value={guess_3} name='guess_3' min='1' max='69' onChange={this.handleChange} required />
+							<input type="number" value={guess_4} name='guess_4' min='1' max='69' onChange={this.handleChange} required />
+							<input type="number" value={guess_5} name='guess_5' min='1' max='69' onChange={this.handleChange} required />
+							<input type="number" value={power_ball} name='power_ball' min='1' max='26' onChange={this.handleChange} required />
+						</div>
 					</div >
 
 					<textarea

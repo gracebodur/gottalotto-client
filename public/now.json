@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "alias": "malekandgrace-gottalotto",
+  "name": "gottalotto-client",
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/.*", "dest": "/index.html" }
+  ]
+}
