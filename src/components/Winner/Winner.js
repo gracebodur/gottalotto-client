@@ -19,7 +19,7 @@ class Winner extends Component {
 				display: 'flex',
         		alignItems: 'center',
         		flexDirection: 'column'}} >
-				<img src={avatar} alt='avatar' />
+				{/* <img src={avatar} alt='avatar' /> */}
 					{user_name}
 				<span 
 				className='winnerName'

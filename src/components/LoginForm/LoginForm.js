@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Typical from 'react-typical'
 import AuthApiService from "../../services/auth-api-service";
 import TokenService from "../../services/token-service";
 import { Link } from 'react-router-dom'
@@ -13,7 +14,6 @@ class LoginForm extends Component {
 	}
 
 	state = { error: null };
-
 
 	// onLoginSuccess = () => {
 	// 	const { location, history } = this.props;
@@ -47,7 +47,11 @@ class LoginForm extends Component {
 		const { error } = this.state;
 		return (
 			<section className="login">
-				<h2>Login</h2>
+				<Typical
+					steps={["Login", 1000, "", 500]}
+					loop={Infinity}
+					wrapper="h2"
+			  	/>
 				<div className="loginText">
 					<p>To demo the platform use:</p>
 					<p>User Name: admin</p>
@@ -84,8 +88,8 @@ class LoginForm extends Component {
 					<button type="submit" className='login-btn'>Login</button>
 				</form>
 
-				<div className="container-login">
-					<p>Need to create an account? <Link to='/register'>Register</Link></p>
+				<div>
+					<p className='form-link'>Need to create an account? <Link to='/register'>Register</Link></p>
 					<Link to="/" className="aButton">
 						Go Back Home
           			</Link>

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import GuessesApiService from '../../services/guesses-api-service'
 import UserContext from '../../contexts/userContext'
 import WeeksApiService from '../../services/weeks-api-service'
+import Typical from 'react-typical'
 import './SubmitGuessForm.css'
 
 class SubmitGuessForm extends Component {
@@ -21,7 +22,6 @@ class SubmitGuessForm extends Component {
 		WeeksApiService.getCurrentWeek()
 			.then(week => {
 				this.setState({ week_id: week.week_id })
-				// console.log(week.week_id)
 			})
 			.catch()
 		this.setState({
@@ -50,17 +50,24 @@ class SubmitGuessForm extends Component {
 		const { guess_1, guess_2, guess_3, guess_4, guess_5, power_ball, message, week_id } = this.state;
 		console.log('weekID', week_id)
 		return (
-			<div>
-				<form onSubmit={event => {
+			<section className='submit'>
+				<Typical
+					steps={["Select your 6 numbers", 1000, "", 500]}
+					loop={Infinity}
+					wrapper="h2"
+					className='typical-submit'
+			  	/>
+				<form className='submitForm'
+					onSubmit={event => {
 					const data = this.state
 					this.handleSubmit(event, data);
 				}}>
+					<div className='submitText'>
+						<h2 className='submitText'>Submit your guess for week {week_id}</h2>
+					</div>
 					<div class="body">
-						<h1>Select your 6 numbers</h1>
-						<h2>Submit your guess for week {week_id}</h2>
-
-						<p>{guess_1}, {guess_2}, {guess_3}, {guess_4}, {guess_5}, {power_ball}</p>
-						<p>{message}</p>
+						{/* <p>{guess_1}, {guess_2}, {guess_3}, {guess_4}, {guess_5}, {power_ball}</p>
+						<p>{message}</p> */}
 						<div class="pt_Quantity">
 							<input
 								type="number"
@@ -71,7 +78,6 @@ class SubmitGuessForm extends Component {
 								onChange={this.handleChange}
 								required
 							/>
-
 							<input type="number" value={guess_2} name='guess_2' min='1' max='69' onChange={this.handleChange} required />
 							<input type="number" value={guess_3} name='guess_3' min='1' max='69' onChange={this.handleChange} required />
 							<input type="number" value={guess_4} name='guess_4' min='1' max='69' onChange={this.handleChange} required />
@@ -90,7 +96,7 @@ class SubmitGuessForm extends Component {
 						required />
 					<button>Submit Guess!</button>
 				</form>
-			</div >
+			</section>
 		)
 	}
 

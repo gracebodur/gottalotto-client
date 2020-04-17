@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
+import Typical from 'react-typical'
 import { Link } from 'react-router-dom'
 import './RegistrationForm.css'
-// import UserContext from "../../contexts/userContext"
+import user from '../../img/user.svg'
 import AuthApiService from "../../services/auth-api-service"
 
 class RegistrationForm extends Component {
-	// static contextType = UserContext;
 
 	constructor() {
 		super();
@@ -13,18 +13,23 @@ class RegistrationForm extends Component {
 			full_name: "",
 			user_name: "",
 			password: "",
+			error: null
 		};
 	}
 	handleSubmit = (ev, data) => {
 		ev.preventDefault();
-
+		this.setState({ error: null });
 		AuthApiService.postUser(data)
 			.then()
-			.catch(this.context.setError);
-		// const { location, history } = this.props;
+			.catch(res => {
+				this.setState({ error: res.error });
+		})
+		
+	};
+
+	// const { location, history } = this.props;
 		// const destination = (location.state || {}).from || "/";
 		// history.push(destination);
-	};
 
 	handleChange = event => {
 		const { name, value, type, checked } = event.target;
@@ -33,12 +38,16 @@ class RegistrationForm extends Component {
 			: this.setState({ [name]: value });
 	};
 
-
 	render() {
 		const { full_name, user_name, password } = this.state
+		const { error } = this.state;
 		return (
 			<section className="register">
-				<h1>Register</h1>
+				<Typical
+					steps={["Register", 1000, "", 500]}
+					loop={Infinity}
+					wrapper="h2"
+			  	/>
 				<div className="registerText">
 					<p>Please fill in this form to create an account.</p>
 				</div>
@@ -49,7 +58,13 @@ class RegistrationForm extends Component {
 						this.handleSubmit(event, data);
 					}}
 				>
-					<div className="registerText">
+					<div role="alert">{error && <p className="red">{error}</p>}</div>
+					<div className="infocontainer">
+    					<img src={user} alt="sign up" className="info"></img>
+  					</div>
+					
+				
+					<div className="formItem">
 						<div className="registerItem">
 						<label htmlFor="full_name"><b>Full Name</b></label>
 						<input
@@ -90,7 +105,7 @@ class RegistrationForm extends Component {
 					</div>
 				</form>
 
-				<div className="container-login">
+				<div className="form-link">
 					<p>Already have an account? <Link to='/login'>Login</Link></p>
 					<Link to="/" className="aButton">
 						Go Back Home
@@ -103,3 +118,4 @@ class RegistrationForm extends Component {
 
 
 export default RegistrationForm;
+

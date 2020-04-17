@@ -39,7 +39,9 @@ class HomePage extends Component {
 						wrapper="h2"
 						className='ready'
 			  		/>
-					<Link to='/guess' className='ready aButton'>Guess!</Link>
+					<div>
+						<Link to='/guess' className='guess-button'>Guess!</Link>
+					</div>
 					</div>
 				</main>
 			</div >

@@ -1,5 +1,40 @@
+form {
+    background-color: #003F5A;
+}
+
+.submit {
+    padding: 16px;
+	height: auto;
+	margin: 0 auto;
+    width: 100%;
+}
+
+.typical-submit {
+    position: absolute;
+    color: #003F5A;
+}
+
+.submit h2 {
+    padding-top: 35px;
+	padding-bottom: 10px;
+	font-size: 2em;
+	text-align: center;
+	letter-spacing: 0.2em;
+}
+
+.submitForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 10%;
+}
+
+.submitText {
+    color: white;
+}
+
 .body {
-    font-family: "Montserrat", sans-serif;
     -webkit-font-kerning: none;
     font-kerning: none;
     font-size: 14px;
