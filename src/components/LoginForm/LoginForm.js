@@ -31,7 +31,6 @@ class LoginForm extends Component {
 		})
 			.then(res => {
 				const { dbUser } = res
-				console.log('dbuser: ', dbUser)
 				user_name.value = "";
 				password.value = "";
 				TokenService.saveAuthToken(res.authToken);
@@ -51,7 +50,7 @@ class LoginForm extends Component {
 					steps={["Login", 1000, "", 500]}
 					loop={Infinity}
 					wrapper="h2"
-			  	/>
+				/>
 				<div className="loginText">
 					<p>To demo the platform use:</p>
 					<p>User Name: admin</p>
@@ -60,8 +59,8 @@ class LoginForm extends Component {
 				<form className="loginForm" onSubmit={this.handleSubmitJwtAuth}>
 					<div role="alert">{error && <p className="red">{error}</p>}</div>
 					<div className="imgcontainer">
-    					<img src={avatar} alt="Avatar" className="avatar"></img>
-  					</div>
+						<img src={avatar} alt="Avatar" className="avatar"></img>
+					</div>
 
 					<div className="formItem">
 						<label htmlFor="user_name">User Name:</label>
