@@ -5,13 +5,18 @@ import WeeksApiService from '../../services/weeks-api-service'
 import UserContext from '../../contexts/userContext'
 
 class SubmitGuessPage extends Component {
+	handleSubmitSuccess = () => {
+		const { location, history } = this.props;
+		const destination = (location.state || {}).from || "/guesslist";
+		history.push(destination);
+	}
 	render() {
 		return (
 			<div>
 				<header>
 					<Nav />
 				</header>
-				<SubmitGuessForm />
+				<SubmitGuessForm onSubmitSuccess={this.handleSubmitSuccess} />
 			</div>
 		)
 	}

@@ -14,7 +14,12 @@ class GuessListPage extends Component {
 	componentDidMount() {
 		this.context.clearError();
 		GuessesApiService.getAllGuesses()
-			.then(this.context.setGuessList)
+			.then(unsortedGuesses => {
+				const sortedGuesses = unsortedGuesses.sort((a, b) => b.guess_id - a.guess_id)
+				const filteredGuesses = sortedGuesses.filter(guess => guess.week_id >= sortedGuesses[0].week_id)
+				this.context.setGuessList(filteredGuesses)
+			}
+			)
 			.catch(this.context.setError);
 	}
 
@@ -25,14 +30,14 @@ class GuessListPage extends Component {
 					<Nav />
 				</header>
 				<Scroll>
-				<Typical
-					steps={["Everyone else's guesses!", 1000, "", 500]}
-					loop={Infinity}
-					wrapper="h1"
-					className='title'
-			  	/>
+					<Typical
+						steps={["Everyone else's guesses!", 1000, "", 500]}
+						loop={Infinity}
+						wrapper="h1"
+						className='title'
+					/>
 					<GuessList />
-				<a href='https://www.powerball.com/games/home' className='pb-link'><p>Power Ball Official Website</p></a>
+					<a href='https://www.powerball.com/games/home' className='pb-link'><p>Power Ball Official Website</p></a>
 				</Scroll>
 			</div>
 		)

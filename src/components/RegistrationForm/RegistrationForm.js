@@ -20,18 +20,9 @@ class RegistrationForm extends Component {
 		ev.preventDefault();
 		this.setState({ error: null });
 		AuthApiService.postUser(data)
-			.then()
-			.catch(res => {
-				this.setState({ error: res.error });
-			})
-		this.props.onRegistrationSuccess()
-
-
+			.then(this.props.onRegistrationSuccess())
+			.catch(res => this.setState({ error: res.error }))
 	};
-
-	// const { location, history } = this.props;
-	// const destination = (location.state || {}).from || "/";
-	// history.push(destination);
 
 	handleChange = event => {
 		const { name, value, type, checked } = event.target;

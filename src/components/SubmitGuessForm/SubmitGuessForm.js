@@ -32,11 +32,8 @@ class SubmitGuessForm extends Component {
 	handleSubmit = (ev, data) => {
 		ev.preventDefault();
 		GuessesApiService.postGuess(data)
-			.then( )
+			.then(this.props.onSubmitSuccess())
 			.catch(this.context.setError);
-		// const { location, history } = this.props;
-		// const destination = (location.state || {}).from || "/";
-		// history.push(destination);
 	};
 
 	handleChange = event => {
@@ -57,12 +54,12 @@ class SubmitGuessForm extends Component {
 					loop={Infinity}
 					wrapper="h2"
 					className='typical-submit'
-			  	/>
+				/>
 				<form className='submitForm'
 					onSubmit={event => {
-					const data = this.state
-					this.handleSubmit(event, data);
-				}}>
+						const data = this.state
+						this.handleSubmit(event, data);
+					}}>
 					<div className='submitText'>
 						<h2 className='submitText'>Submit your guess for week {week_id}</h2>
 						<p>{guess_1}, {guess_2}, {guess_3}, {guess_4}, {guess_5}, {power_ball}</p>
@@ -80,46 +77,46 @@ class SubmitGuessForm extends Component {
 								onChange={this.handleChange}
 								required
 							/>
-							<input 
-								type="number" 
-								value={guess_2} 
-								name='guess_2' 
-								min='1' 
-								max='69' 
-								onChange={this.handleChange} 
-								required 
+							<input
+								type="number"
+								value={guess_2}
+								name='guess_2'
+								min='1'
+								max='69'
+								onChange={this.handleChange}
+								required
 							/>
-							<input 
-								type="number" 
-								value={guess_3} 
-								name='guess_3' 
-								min='1' 
-								max='69' 
-								onChange={this.handleChange} 
+							<input
+								type="number"
+								value={guess_3}
+								name='guess_3'
+								min='1'
+								max='69'
+								onChange={this.handleChange}
 								required />
-							<input 
-								type="number" 
-								value={guess_4} 
-								name='guess_4' 
-								min='1' 
-								max='69' 
-								onChange={this.handleChange} 
+							<input
+								type="number"
+								value={guess_4}
+								name='guess_4'
+								min='1'
+								max='69'
+								onChange={this.handleChange}
 								required />
-							<input 
-								type="number" 
-								value={guess_5} 
-								name='guess_5' 
-								min='1' 
-								max='69' 
-								onChange={this.handleChange} 
+							<input
+								type="number"
+								value={guess_5}
+								name='guess_5'
+								min='1'
+								max='69'
+								onChange={this.handleChange}
 								required />
-							<input 
-								type="number" 
-								value={power_ball} 
-								name='power_ball' 
-								min='1' 
-								max='26' 
-								onChange={this.handleChange} 
+							<input
+								type="number"
+								value={power_ball}
+								name='power_ball'
+								min='1'
+								max='26'
+								onChange={this.handleChange}
 								required />
 						</div>
 					</div >
