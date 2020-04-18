@@ -23,13 +23,15 @@ class RegistrationForm extends Component {
 			.then()
 			.catch(res => {
 				this.setState({ error: res.error });
-		})
-		
+			})
+		this.props.onRegistrationSuccess()
+
+
 	};
 
 	// const { location, history } = this.props;
-		// const destination = (location.state || {}).from || "/";
-		// history.push(destination);
+	// const destination = (location.state || {}).from || "/";
+	// history.push(destination);
 
 	handleChange = event => {
 		const { name, value, type, checked } = event.target;
@@ -47,7 +49,7 @@ class RegistrationForm extends Component {
 					steps={["Register", 1000, "", 500]}
 					loop={Infinity}
 					wrapper="h2"
-			  	/>
+				/>
 				<div className="registerText">
 					<p>Please fill in this form to create an account.</p>
 				</div>
@@ -60,45 +62,45 @@ class RegistrationForm extends Component {
 				>
 					<div role="alert">{error && <p className="red">{error}</p>}</div>
 					<div className="infocontainer">
-    					<img src={user} alt="sign up" className="info"></img>
-  					</div>
-					
-				
+						<img src={user} alt="sign up" className="info"></img>
+					</div>
+
+
 					<div className="formItem">
 						<div className="registerItem">
-						<label htmlFor="full_name"><b>Full Name</b></label>
-						<input
-							type="text"
-							placeholder="Enter Full Name"
-							name="full_name"
-							value={full_name}
-							onChange={this.handleChange}
-							required
-						/>
+							<label htmlFor="full_name"><b>Full Name</b></label>
+							<input
+								type="text"
+								placeholder="Enter Full Name"
+								name="full_name"
+								value={full_name}
+								onChange={this.handleChange}
+								required
+							/>
 						</div>
 
 						<div className="registerItem">
-						<label htmlFor="user_name"><b>User Name</b></label>
-						<input
-							type="text"
-							placeholder="Enter User Name"
-							name="user_name"
-							value={user_name}
-							onChange={this.handleChange}
-							required
-						/>
+							<label htmlFor="user_name"><b>User Name</b></label>
+							<input
+								type="text"
+								placeholder="Enter User Name"
+								name="user_name"
+								value={user_name}
+								onChange={this.handleChange}
+								required
+							/>
 						</div>
 
 						<div className="registerItem">
-						<label htmlFor="psw"><b>Password</b></label>
-						<input
-							type="password"
-							placeholder="Enter Password"
-							name="password"
-							value={password}
-							onChange={this.handleChange}
-							required
-						/>
+							<label htmlFor="psw"><b>Password</b></label>
+							<input
+								type="password"
+								placeholder="Enter Password"
+								name="password"
+								value={password}
+								onChange={this.handleChange}
+								required
+							/>
 						</div>
 
 						<button type="submit" className="registerbtn">Register</button>

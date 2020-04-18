@@ -9,9 +9,10 @@ class RegisterPage extends Component {
 		},
 	}
 
-	handleRegistrationSuccess = user => {
-		const { history } = this.props
-		history.push('/')
+	handleRegistrationSuccess = () => {
+		const { location, history } = this.props;
+		const destination = (location.state || {}).from || "/login";
+		history.push(destination);
 	}
 
 	render() {
