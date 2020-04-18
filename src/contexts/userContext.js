@@ -40,8 +40,9 @@ export class UserProvider extends Component {
 		// 		})
 		// 	}
 		// }
+		this.state = { user: {}, error: null }
 	}
-	state = { user: {}, error: null }
+
 
 
 	setError = error => {
