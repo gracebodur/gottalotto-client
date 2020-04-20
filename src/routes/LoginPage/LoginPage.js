@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom'
 import LoginForm from '../../components/LoginForm/LoginForm'
 import TokenService from '../../services/token-service'
 import Nav from '../../components/Nav/Nav';
+import './LoginPage.css'
 
 
 class LoginPage extends Component {

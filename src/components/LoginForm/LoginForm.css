@@ -85,4 +85,19 @@ input[type=password] {
 	color: red;
 	padding-top: 10px;
 }
-  
+
+/* ----------- iPhone X ----------- */
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+      nav {
+          max-width: 50vw;
+      }
+      .link {
+          padding: 12px;
+          font-size: .5em;
+      }
+}
+

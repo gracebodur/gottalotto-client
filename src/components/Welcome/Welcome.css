@@ -37,5 +37,78 @@ section {
     flex: 1;
 }
 
+/*--------i Pad -------*/
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .welcome {
+        height: 15vh;
+        font-size: 1.5em;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+     section {
+         flex-direction: row;
+         height: 20%;
+    }
+
+    .box {
+        padding: 50px;
+    }
+
+    .box > img {
+        width: 30%;
+        height: 30%
+    }
+    
+    .cardContent {
+        font-size: .5em;
+        letter-spacing: 1.5px;
+        line-height: 1.5;
+        text-align: center;
+    }
+    
+}
+
+/* ----------- iPhone X ----------- */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+    .welcome {
+        height: 15vh;
+        font-size: 1em;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+     section {
+         flex-direction: column;
+         height: 20%;
+    }
+
+    .box > img {
+        width: 50%;
+        height: auto;
+    }
+
+    .box {
+        padding: 50px;
+    }
+
+    .cardContent {
+        font-size: .5em;
+        letter-spacing: 1.5px;
+        line-height: 1.5;
+        margin-left: 5px;
+        margin-right: 10px;
+        text-align: center;
+    }
+    
+}
 
 

@@ -20,15 +20,15 @@ class Welcome extends Component {
 					<section>
 					<div className='box one'>
 						<img src={green_ball} alt='green lottery ball' />
-						<p className='cardContent'>Veniam occaecat ullamco ut officia deserunt tempor.</p>
+						<p className='cardContent'>Do you want to have plain old fun in guessing the winning numbers for each Saturday’s PowerBall drawing?</p>
 					</div>
 					<div className='box two'>
 						<img src={yellow_ball} alt='yellow lottery ball'/>
-						<p className='cardContent'>Ex eiusmod ad laborum sunt fugiat adipisicing elit duis esse amet.</p>
+						<p className='cardContent'>or share your motivational message to the world or promote your social media accounts?</p>
 					</div>
 					<div className='box three'>
 						<img src={red_ball} alt='lottery ball' />
-						<p className='cardContent'>Laboris sit laboris dolore do deserunt fugiat veniam dolore deserunt consectetur nisi esse velit.</p>
+						<p className='cardContent'>Play the GottaLotto guessing game!</p>
 					</div>
 					</section>
 				</div>

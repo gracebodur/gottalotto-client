@@ -27,7 +27,7 @@ class HomePage extends Component {
 					<Nav />
 				</header>
 				<main> 
-					<div className='zone grid-wrapper'>
+					<div className='HomePage'>
 
 					{TokenService.hasAuthToken()
 						? <WinnersList />
