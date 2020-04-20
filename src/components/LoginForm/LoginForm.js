@@ -57,7 +57,7 @@ class LoginForm extends Component {
 					<p>Password: admin</p>
 				</div>
 				<form className="loginForm" onSubmit={this.handleSubmitJwtAuth}>
-					<div role="alert">{error && <p className="red">{error}</p>}</div>
+					<div className='error-login' role="alert">{error && <p className="red-login">{error}</p>}</div>
 					<div className="imgcontainer">
 						<img src={avatar} alt="Avatar" className="avatar"></img>
 					</div>

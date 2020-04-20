@@ -78,3 +78,15 @@ input[type="password"] {
 	padding-top: 5px;
 }
 
+.error-register {
+  display: flex;
+  text-align: center;
+}
+
+.red-register {
+  font-size: 1.2em;
+  letter-spacing: 0.1em;
+  display: inline-block;
+  color: red;
+  padding-top: 10px;
+}

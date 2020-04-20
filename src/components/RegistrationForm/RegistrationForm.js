@@ -6,33 +6,59 @@ import user from '../../img/user.svg'
 import AuthApiService from "../../services/auth-api-service"
 
 class RegistrationForm extends Component {
-
-	constructor() {
-		super();
-		this.state = {
-			full_name: "",
-			user_name: "",
-			password: "",
-			error: null
-		};
+	static defaultProps = {
+		onRegistrationSuccess: () => {}
 	}
-	handleSubmit = (ev, data) => {
-		ev.preventDefault();
-		this.setState({ error: null });
-		AuthApiService.postUser(data)
-			.then(this.props.onRegistrationSuccess())
-			.catch(res => this.setState({ error: res.error }))
-	};
 
-	handleChange = event => {
-		const { name, value, type, checked } = event.target;
-		type === "checkbox"
-			? this.setState({ [name]: checked })
-			: this.setState({ [name]: value });
-	};
+	state = { error: null }
+
+	// constructor() {
+	// 	super();
+	// 	this.state = {
+	// 		full_name: "",
+	// 		user_name: "",
+	// 		password: "",
+	// 		error: null
+	// 	};
+	// }
+
+	handleSubmit = ev => {
+		ev.preventDefault()
+		const { full_name, user_name, password } = ev.target
+	
+		this.setState({ error: null })
+		AuthApiService.postUser({
+		  user_name: user_name.value,
+		  password: password.value,
+		  full_name: full_name.value,
+		})
+		  .then(user => {
+			full_name.value = ''
+			user_name.value = ''
+			password.value = ''
+			this.props.onRegistrationSuccess()
+		  })
+		  .catch(res => { this.setState({ error: res.error })
+		})
+	  }
+
+	// handleSubmit = (ev, data) => {
+	// 	ev.preventDefault();
+	// 	this.setState({ error: null });
+	// 	AuthApiService.postUser(data)
+	// 		.then(this.props.onRegistrationSuccess())
+	// 		.catch(res => this.setState({ error: res.error }))
+	// };
+
+	// handleChange = event => {
+	// 	const { name, value, type, checked } = event.target;
+	// 	type === "checkbox"
+	// 		? this.setState({ [name]: checked })
+	// 		: this.setState({ [name]: value });
+	// };
 
 	render() {
-		const { full_name, user_name, password } = this.state
+		// const { full_name, user_name, password } = this.state
 		const { error } = this.state;
 		return (
 			<section className="register">
@@ -46,12 +72,13 @@ class RegistrationForm extends Component {
 				</div>
 				<form
 					className="registerForm"
-					onSubmit={event => {
-						const data = this.state;
-						this.handleSubmit(event, data);
-					}}
+					// onSubmit={event => {
+					// 	const data = this.state;
+					// 	this.handleSubmit(event, data);
+					// }}
+					onSubmit={this.handleSubmit}
 				>
-					<div role="alert">{error && <p className="red">{error}</p>}</div>
+					<div className='error-register' role="alert">{error && <p className="red-register">{error}</p>}</div>
 					<div className="infocontainer">
 						<img src={user} alt="sign up" className="info"></img>
 					</div>
@@ -64,7 +91,7 @@ class RegistrationForm extends Component {
 								type="text"
 								placeholder="Enter Full Name"
 								name="full_name"
-								value={full_name}
+								// value={full_name}
 								onChange={this.handleChange}
 								required
 							/>
@@ -76,8 +103,8 @@ class RegistrationForm extends Component {
 								type="text"
 								placeholder="Enter User Name"
 								name="user_name"
-								value={user_name}
-								onChange={this.handleChange}
+								// value={user_name}
+								// onChange={this.handleChange}
 								required
 							/>
 						</div>
@@ -88,8 +115,8 @@ class RegistrationForm extends Component {
 								type="password"
 								placeholder="Enter Password"
 								name="password"
-								value={password}
-								onChange={this.handleChange}
+								// value={password}
+								// onChange={this.handleChange}
 								required
 							/>
 						</div>
