@@ -39,6 +39,77 @@
     letter-spacing: 2px;
 }
 
+
+/* ----------- Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+    .main-nav {
+        max-width: 100vw;
+    }
+    .link {
+      padding: 15px;
+      padding-right: 15px;;
+      font-size: .5em;
+  }
+}
+
+
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .main-nav {
+        max-width: 100vw;
+    }
+    .link {
+      padding-right: 10px;;
+      font-size: .6em;
+    }
+}
+
+
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .main-nav {
+        max-width: 110vw;
+    }
+    .link {
+        font-size: .5em;
+    }
+
+}
+
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    .main-nav {
+        max-width: 100vw;
+    }
+    .link {
+        font-size: .5em;
+    }
+
+}
+
+
+
 /* ----------- iPhone X ----------- */
 
 @media only screen 
@@ -48,7 +119,7 @@
         .main-nav {
             max-width: 100vw;
         }
-      .link {
+        .link {
           padding: 12px;
           font-size: .5em;
       }
