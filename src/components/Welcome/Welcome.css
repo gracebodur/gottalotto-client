@@ -1,114 +1,113 @@
-section {
-    display: flex;
-    flex-direction: row;
+.winnerList,
+.guessList,
+.welcomeSection {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .welcome {
-    font-size: 2em;
-    padding-top: 50px;
-    color:#003F5A;
+  font-size: 2em;
+  padding-top: 50px;
+  color: #003f5a;
 }
 
 .cardContent {
-    color: white;
-    font-weight: 500px;
-    font-size: .5em;
-    padding-top: 10px;
+  color: white;
+  font-weight: 500px;
+  font-size: 0.75em;
+  padding-top: 10px;
+  text-align: center;
+  line-height: 30px;
 }
 
 .box {
-    background-color: #003F5A;
-    padding: 100px;
-    margin: 20px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  background-color: #003f5a;
+  height: 500px;
+  padding: 60px;
+  margin: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  min-width: 350px;
 }
 
 .box > img {
-  width: 100%;
-  height: auto;
+  width: 125px;
+  height: 125px;
 }
 
 .one,
 .two,
 .three {
-    flex: 1;
+  flex: 1;
 }
 
 /*--------i Pad -------*/
-@media only screen 
-  and (min-device-width: 768px) 
-  and (max-device-width: 1024px) 
-  and (-webkit-min-device-pixel-ratio: 1) {
-    .welcome {
-        height: 15vh;
-        font-size: 1.5em;
-        align-items: center;
-        display: flex;
-        justify-content: center;
-    }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  .welcome {
+    height: 15vh;
+    font-size: 1.5em;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
 
-     section {
-         flex-direction: row;
-         height: 20%;
-    }
+  section {
+    flex-direction: row;
+    height: 20%;
+  }
 
-    .box {
-        padding: 50px;
-    }
+  .box {
+    padding: 50px;
+  }
 
-    .box > img {
-        width: 30%;
-        height: 30%
-    }
-    
-    .cardContent {
-        font-size: .5em;
-        letter-spacing: 1.5px;
-        line-height: 1.5;
-        text-align: center;
-    }
-    
+  .box > img {
+    width: 30%;
+    height: 30%;
+  }
+
+  .cardContent {
+    font-size: 0.5em;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+    text-align: center;
+  }
 }
 
 /* ----------- iPhone X ----------- */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
-    .welcome {
-        height: 15vh;
-        font-size: 1em;
-        align-items: center;
-        display: flex;
-        justify-content: center;
-    }
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+  .welcome {
+    height: 15vh;
+    font-size: 1em;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
 
-     section {
-         flex-direction: column;
-         height: 20%;
-    }
+  section {
+    flex-direction: row;
+    height: 20%;
+  }
 
-    .box > img {
-        width: 50%;
-        height: auto;
-    }
+  .box > img {
+    width: 50%;
+    height: auto;
+  }
 
-    .box {
-        padding: 50px;
-    }
+  .box {
+    padding: 50px;
+  }
 
-    .cardContent {
-        font-size: .5em;
-        letter-spacing: 1.5px;
-        line-height: 1.5;
-        margin-left: 5px;
-        margin-right: 10px;
-        text-align: center;
-    }
-    
+  .cardContent {
+    font-size: 0.5em;
+    letter-spacing: 1.5px;
+    line-height: 1.5;
+    margin-left: 5px;
+    margin-right: 10px;
+    text-align: center;
+  }
 }
-
-

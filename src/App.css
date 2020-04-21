@@ -1,4 +1,3 @@
-
 * {
   box-sizing: border-box;
 }
@@ -11,10 +10,10 @@
 
 .login {
   display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 30px;
-	margin: auto;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  margin: auto;
 }
 
 .register {
@@ -24,7 +23,6 @@
   padding: 30px;
   margin: auto;
 }
-
 
 .aButton {
   color: #571717 !important;
@@ -92,7 +90,7 @@ h2 {
 
 a {
   text-decoration: none;
-  color: #003F5A;
+  color: #003f5a;
 }
 
 a:hover {
@@ -105,25 +103,22 @@ h3,
 h4,
 h5,
 h6 {
- font-family: Orbitron, sans-serif;
+  font-family: Orbitron, sans-serif;
   font-weight: 200;
   color: #222;
 }
 
 /* ----------- iPhone X ----------- */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
-    html {
-      max-width: 100%;
-      height: 100vh;
-      height: calc(var(--vh, 1vh) * 100);
-    }
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+  html {
+    max-width: 100%;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+  }
 
-    .App {
-      max-width: 100%;
-      padding-top: 0;
-      padding-bottom: 0;
-    }
+  .App {
+    max-width: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }

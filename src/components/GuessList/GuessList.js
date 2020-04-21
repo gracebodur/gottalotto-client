@@ -16,11 +16,11 @@ class GuessList extends Component {
 	}
 	render() {
 		const { error } = this.context;
-		
+
 		return (
-			<section>
-				{error ? ( <p className="red">There was an error, try again</p>) 
-				: (this.renderGuesses())}
+			<section className="guessList" >
+				{error ? (<p className="red">There was an error, try again</p>)
+					: (this.renderGuesses())}
 			</section>
 		)
 	}

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Typical from 'react-typical'
 import WinnersContext from '../../contexts/winnersContext'
 import Winner from '../Winner/Winner'
 
@@ -8,6 +9,7 @@ class WinnersList extends Component {
 	renderWinners() {
 		const { winners } = this.context;
 		console.log('winners: ', winners)
+		winners.reverse()
 		return winners.map(winner => (
 			<Winner key={winner.week_id} winner={winner} />
 		));
@@ -17,8 +19,12 @@ class WinnersList extends Component {
 		return (
 			<div>
 				<main>
-					<h2>Most correct numbers</h2>
-					<section>
+					<Typical
+						steps={["Most Recent Winners", 1000, "", 500]}
+						loop={Infinity}
+						wrapper="h2"
+					/>
+					<section className="winnerList">
 						{error ? (
 							<p className="red">There was an error, try again</p>
 						) : (
