@@ -12,3 +12,6 @@
   font-size: 30px;
   padding: 15px;
 }
+.flippy-card {
+  z-index: 0;
+}

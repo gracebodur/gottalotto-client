@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^7.2.1",
     "enzyme": "^3.11.0",
     "enzyme-to-json": "^3.4.4",
+    "now": "^18.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-flippy": "^0.1.5",

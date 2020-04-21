@@ -23,7 +23,7 @@
   width: 100%;
 }
 .siteTitle {
-  font-size: 40px;
+  font-size: 25px;
 }
 .main-nav {
   display: flex;
@@ -31,6 +31,7 @@
   margin: 0;
   padding: 5px;
   background-color: #de6600;
+  z-index: 8;
 }
 
 .right {
