@@ -9,6 +9,7 @@ import WinnersApiService from '../../services/winners-api-service'
 import WinnersContext from '../../contexts/winnersContext'
 
 import './HomePage.css'
+import Footer from '../../components/Footer/Footer';
 
 class HomePage extends Component {
 	static contextType = WinnersContext
@@ -26,24 +27,25 @@ class HomePage extends Component {
 				<header>
 					<Nav />
 				</header>
-				<main> 
+				<main>
 					<div className='HomePage'>
 
-					{TokenService.hasAuthToken()
-						? <WinnersList />
-						: <Welcome />}
+						{TokenService.hasAuthToken()
+							? <WinnersList />
+							: <Welcome />}
 
-					<Typical
-						steps={["Ready to submit your own guess?", 5000, "", 2000]}
-						loop={Infinity}
-						wrapper="h2"
-						className='ready'
-			  		/>
-					<div>
-						<Link to='/guess' className='guess-button'>Guess!</Link>
-					</div>
+						<Typical
+							steps={["Ready to submit your own guess?", 5000, "", 2000]}
+							loop={Infinity}
+							wrapper="h2"
+							className='ready'
+						/>
+						<div>
+							<Link to='/guess' className='guess-button'>Guess!</Link>
+						</div>
 					</div>
 				</main>
+				<Footer />
 			</div >
 		)
 	}

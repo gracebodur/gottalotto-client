@@ -7,7 +7,6 @@ import LoginPage from './routes/LoginPage/LoginPage';
 import RegisterPage from './routes/RegisterPage/RegisterPage';
 import SubmitGuessPage from './routes/SubmitGuessPage/SubmitGuessPage';
 import GuessListPage from './routes/GuessListPage/GuessListPage';
-import Footer from './components/Footer/Footer';
 
 import PrivateRoute from "../src/Utils/PrivateRoute"
 import PublicOnlyRoute from "../src/Utils/PublicOnlyRoute";
@@ -25,7 +24,6 @@ class App extends Component {
           <PrivateRoute exact path='/guess' component={SubmitGuessPage} />
           <PrivateRoute exact path='/guesslist' component={GuessListPage} />
         </Switch>
-        <Footer />
       </div>
     )
   }

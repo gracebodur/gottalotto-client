@@ -4,6 +4,7 @@ import LoginForm from '../../components/LoginForm/LoginForm'
 import TokenService from '../../services/token-service'
 import Nav from '../../components/Nav/Nav';
 import './LoginPage.css'
+import Footer from '../../components/Footer/Footer';
 
 
 class LoginPage extends Component {
@@ -39,6 +40,7 @@ class LoginPage extends Component {
                 </header>
                 {this.state.loggedIn ? <Redirect to='/' /> : <LoginForm
                     onLoginSuccess={this.setLoggedIn} />}
+                <Footer />
             </section>
         )
     }

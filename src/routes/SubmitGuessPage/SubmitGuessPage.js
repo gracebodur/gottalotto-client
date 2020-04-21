@@ -3,6 +3,7 @@ import SubmitGuessForm from '../../components/SubmitGuessForm/SubmitGuessForm';
 import Nav from '../../components/Nav/Nav';
 import WeeksApiService from '../../services/weeks-api-service'
 import UserContext from '../../contexts/userContext'
+import Footer from '../../components/Footer/Footer';
 
 class SubmitGuessPage extends Component {
 	handleSubmitSuccess = () => {
@@ -17,6 +18,7 @@ class SubmitGuessPage extends Component {
 					<Nav />
 				</header>
 				<SubmitGuessForm onSubmitSuccess={this.handleSubmitSuccess} />
+				<Footer />
 			</div>
 		)
 	}

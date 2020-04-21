@@ -7,6 +7,7 @@ import './GuessListPage.css'
 
 import Scroll from '../../components/Scroll/Scroll'
 import Typical from 'react-typical'
+import Footer from '../../components/Footer/Footer';
 
 class GuessListPage extends Component {
 	static contextType = GuessListContext;
@@ -37,8 +38,9 @@ class GuessListPage extends Component {
 						className='title'
 					/>
 					<GuessList />
-					<a href='https://www.powerball.com/games/home' className='pb-link'><p>Power Ball Official Website</p></a>
+					<a href='https://www.powerball.com/games/home' className='pb-link' target='_blank'><p>Power Ball Official Website</p></a>
 				</Scroll>
+				<Footer />
 			</div>
 		)
 	}
