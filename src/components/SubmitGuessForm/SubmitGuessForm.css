@@ -99,6 +99,13 @@ form {
   outline: 0;
 }
 
+.soapboxPrompt p {
+  text-align: center;
+  color: #dd6600;
+  margin-bottom: 10px;
+  line-height: 25px;
+}
+
 .body .pt_Quantity .pt_QuantityNav {
   float: left;
   position: relative;

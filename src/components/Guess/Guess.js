@@ -20,7 +20,7 @@ class Guess extends Component {
 							alignItems: 'center',
 							flexDirection: 'column'
 						}} >
-							<img src={avatar} alt='avatar' style={{ maxWidth: '100%', maxHeight: '100%' }} />
+							<img src={avatar} alt='avatar' style={{ maxWidth: '150px', maxHeight: '150px' }} />
 							{user_name}
 
 							<span

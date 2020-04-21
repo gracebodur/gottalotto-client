@@ -21,7 +21,7 @@ class WinnersList extends Component {
 					<Typical
 						steps={["Most Recent Winners", 1000, "", 500]}
 						loop={Infinity}
-						wrapper="h2"
+						wrapper="h1"
 					/>
 					<section className="winnerList">
 						{error ? (

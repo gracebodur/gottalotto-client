@@ -47,19 +47,19 @@ class SubmitGuessForm extends Component {
 		const { user_id, guess_1, guess_2, guess_3, guess_4, guess_5, power_ball, message, week_id } = this.state;
 		return (
 			<section className='submit'>
-				<Typical
+				{/* <Typical
 					steps={["Select your 6 numbers", 1000, "", 500]}
 					loop={Infinity}
 					wrapper="h2"
 					className='typical-submit'
-				/>
+				/> */}
 				<form className='submitForm'
 					onSubmit={event => {
 						const data = this.state
 						this.handleSubmit(event, data);
 					}}>
 					<div className='submitText'>
-						<h2 className='submitText'>Submit your guess for week {week_id}</h2>
+						<h2 className='submitText'>Submit your PowerBall guess for week {week_id}'s upcoming drawing</h2>
 					</div>
 					<div className="body">
 						<div className="pt_Quantity">
@@ -121,12 +121,17 @@ class SubmitGuessForm extends Component {
 								required />
 						</div>
 					</div >
-
+					<div className="soapboxPrompt">
+						<p>Use the section below as your "Virtual Soapbox".<br />
+							What is the one message you want to share with the world?</p>
+					</div>
 					<textarea
 						type="text"
 						value={message}
 						name="message"
 						maxLength="280"
+						rows="6"
+						cols="45"
 						placeholder='Enter message here'
 						onChange={this.handleChange}
 						required />
