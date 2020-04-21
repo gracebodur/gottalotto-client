@@ -1,27 +1,33 @@
 # App Name: GottaLotto
 
-Author: Malek Adair and Marie Grace Bodur
+Author: [Malek Adair](https://github.com/malekadair) and [Marie Grace Bodur](https://github.com/gracebodur)
 ***
 
 Live app: [GottaLotto](https://malekandgrace-gottalotto.now.sh/)
-***
 
 ## About GottaLotto
-***
+
+## Application Features
+
+## Screenshots
+
 
 ## Technologies used
-- Client side: Reactjs, Javascript, HTML and CSS
-- Server side: Express.js, Node.js, PostgreSQL
-***
+  #### Front-end technologies:
+  - Reactjs
+  - React-flippy
+  - React-typical
+  - Javascript
+  - HTML5 
+  - CSS3
+  #### Back-end technologies: 
+  - Express.js
+  - Node.js
+  - PostgreSQL
+  - Node-fetch
+  - Cron job
 
 ## Links:
 
-- Github
-    [Client](https://github.com/gracebodur/start-small.git) |
-    [Server](https://github.com/gracebodur/gottalotto-api.git)
-
-- Heroku
-    [Heroku]()
-
-***
+API Documentation: [GottaLotto API](https://github.com/gracebodur/gottalotto-api.git)
 
