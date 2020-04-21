@@ -45,8 +45,6 @@ class SubmitGuessForm extends Component {
 
 	render() {
 		const { user_id, guess_1, guess_2, guess_3, guess_4, guess_5, power_ball, message, week_id } = this.state;
-		console.log('weekID', week_id)
-		console.log('userId', user_id)
 		return (
 			<section className='submit'>
 				<Typical
@@ -62,9 +60,6 @@ class SubmitGuessForm extends Component {
 					}}>
 					<div className='submitText'>
 						<h2 className='submitText'>Submit your guess for week {week_id}</h2>
-						<p>{guess_1}, {guess_2}, {guess_3}, {guess_4}, {guess_5}, {power_ball}</p>
-						<p>{message}</p>
-						<p>{user_id}</p>
 					</div>
 					<div className="body">
 						<div className="pt_Quantity">
@@ -74,6 +69,7 @@ class SubmitGuessForm extends Component {
 								name='guess_1'
 								min='1'
 								max='69'
+								placeholder='1-69'
 								onChange={this.handleChange}
 								required
 							/>
@@ -83,6 +79,7 @@ class SubmitGuessForm extends Component {
 								name='guess_2'
 								min='1'
 								max='69'
+								placeholder='1-69'
 								onChange={this.handleChange}
 								required
 							/>
@@ -92,6 +89,7 @@ class SubmitGuessForm extends Component {
 								name='guess_3'
 								min='1'
 								max='69'
+								placeholder='1-69'
 								onChange={this.handleChange}
 								required />
 							<input
@@ -100,6 +98,7 @@ class SubmitGuessForm extends Component {
 								name='guess_4'
 								min='1'
 								max='69'
+								placeholder='1-69'
 								onChange={this.handleChange}
 								required />
 							<input
@@ -108,6 +107,7 @@ class SubmitGuessForm extends Component {
 								name='guess_5'
 								min='1'
 								max='69'
+								placeholder='1-69'
 								onChange={this.handleChange}
 								required />
 							<input
@@ -116,6 +116,7 @@ class SubmitGuessForm extends Component {
 								name='power_ball'
 								min='1'
 								max='26'
+								placeholder='1-26'
 								onChange={this.handleChange}
 								required />
 						</div>
@@ -129,8 +130,10 @@ class SubmitGuessForm extends Component {
 						placeholder='Enter message here'
 						onChange={this.handleChange}
 						required />
-					<button>Submit Guess!</button>
+					<button className='submit-button'>Submit Guess!</button>
+
 				</form>
+
 			</section>
 		)
 	}

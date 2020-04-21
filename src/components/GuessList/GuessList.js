@@ -9,7 +9,6 @@ class GuessList extends Component {
 
 	renderGuesses() {
 		const { guessList = [] } = this.context;
-		console.log('guesslist: ', guessList)
 		return guessList.map(guess => (
 			<Guess key={guess.guess_id} guess={guess} />
 		));

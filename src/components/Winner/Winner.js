@@ -1,16 +1,14 @@
 import React, { Component } from 'react'
-// import avatar from '../../img/morty'
 import Flippy, { FrontSide, BackSide } from 'react-flippy'
+import trophy from '../../img/trophy.png'
 import './Winner.css'
 
 class Winner extends Component {
 	render() {
-		console.log(this.props.winner)
-		const { user_name, guess_1, guess_2, guess_3, guess_4, guess_5, power_ball, message, guess_created_date, has_won } = this.props.winner
+		const { user_name, guess_1, guess_2, guess_3, guess_4, guess_5, power_ball, message } = this.props.winner
 		return (
 			<section className='Winner'>
 				<div style={{ display: 'flex', flex: '1 0 200px', justifyContent: 'space-around', 'flexWrap': 'wrap' }}>
-					{guess_created_date}
 					<Flippy
 						flipOnHover={true}
 						flipDirection='vertical'
@@ -20,18 +18,21 @@ class Winner extends Component {
 							backgroundColor: '#41669d',
 							display: 'flex',
 							alignItems: 'center',
-							flexDirection: 'column'
+							flexDirection: 'column',
 						}} >
-							{/* <img src={avatar} alt='avatar' /> */}
+							<img src={trophy} alt='avatar' style={{ maxWidth: '200px', maxHeight: '200px' }} />
 							{user_name}
 							<span
 								className='winnerName'
 								style={{
-									fontSize: '12px',
+									fontSize: '17px',
 									position: 'absolute',
-									bottom: '10px',
-									width: '100%'
+									bottom: '25px',
+									width: '100%',
+									padding: '25px'
 								}}>
+								Guessed Numbers:<br /><br />
+								{guess_1}, {guess_2}, {guess_3}, {guess_4}, {guess_5}, PB: {power_ball}<br />
 							</span>
 						</FrontSide>
 						<BackSide style={{
@@ -44,16 +45,16 @@ class Winner extends Component {
 							{message}
 							<span className='winnerNumbers'
 								style={{
-									fontSize: '18px',
+									fontSize: '17px',
 									position: 'absolute',
 									bottom: '10px',
 									width: '100%'
-								}}>{guess_1}, {guess_2}, {guess_3}, {guess_4}, {guess_5}, PB: {power_ball}<br />
+								}}>
 							</span>
 						</BackSide>
 					</Flippy>
 				</div>
-			</section>
+			</section >
 		)
 	}
 }

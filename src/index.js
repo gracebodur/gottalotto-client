@@ -7,7 +7,6 @@ import { GuessProvider } from './contexts/guessContext';
 import { GuessListProvider } from './contexts/guessListContext';
 import { WinnersProvider } from './contexts/winnersContext';
 import { UserProvider } from './contexts/userContext';
-// import { UserProvider } from './contexts/userContext';
 
 ReactDOM.render(
   <React.StrictMode>

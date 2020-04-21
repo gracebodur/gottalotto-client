@@ -8,7 +8,6 @@ class WinnersList extends Component {
 
 	renderWinners() {
 		const { winners } = this.context;
-		console.log('winners: ', winners)
 		winners.reverse()
 		return winners.map(winner => (
 			<Winner key={winner.week_id} winner={winner} />

@@ -1,5 +1,4 @@
 .zone {
-  cursor: pointer;
   color: #fff;
   font-size: 2em;
   border-radius: 4px;
@@ -23,11 +22,14 @@
   top: 0;
   width: 100%;
 }
-
+.siteTitle {
+  font-size: 40px;
+}
 .main-nav {
   display: flex;
   list-style: none;
   margin: 0;
+  padding: 5px;
   background-color: #de6600;
 }
 

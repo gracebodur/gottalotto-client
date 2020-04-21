@@ -30,7 +30,7 @@ class Nav extends Component {
         return (
             <div>
                 <nav className='zone sticky main-nav'>
-                    <Link className='right link' to='/'>GottaLotto</Link>
+                    <Link className='right  siteTitle' to='/'>GottaLotto</Link>
                     {TokenService.hasAuthToken()
                         ? this.renderLogout()
                         : this.renderLogin()}

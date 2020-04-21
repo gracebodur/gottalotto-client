@@ -12,15 +12,8 @@ class RegisterPage extends Component {
 
 	handleRegistrationSuccess = () => {
 		const { history } = this.props;
-		// const destination = (location.state || {}).from || "/login";
 		history.push('/login');
 	}
-
-	// handleRegistrationSuccess = () => {
-	// 	const { location, history } = this.props;
-	// 	const destination = (location.state || {}).from || "/login";
-	// 	history.push(destination);
-	// }
 
 	render() {
 		return (

@@ -15,11 +15,6 @@ class LoginForm extends Component {
 
 	state = { error: null };
 
-	// onLoginSuccess = () => {
-	// 	const { location, history } = this.props;
-	// 	const destination = (location.state || {}).from || "/";
-	// 	history.push(destination);
-	// };
 	handleSubmitJwtAuth = ev => {
 		ev.preventDefault();
 		this.setState({ error: null });
