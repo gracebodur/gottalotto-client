@@ -9,6 +9,13 @@ form {
   width: 100%;
 }
 
+.loginPage,
+.submit,
+.registrationPage,
+.homePage {
+  min-height: 100vh;
+}
+
 .typical-submit {
   position: absolute;
   color: #003f5a;
