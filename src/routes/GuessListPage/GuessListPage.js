@@ -32,7 +32,7 @@ class GuessListPage extends Component {
 				</header>
 				<Scroll>
 					<Typical
-						steps={["Everyone else's guesses!", 1000, "", 500]}
+						steps={["All guesses for upcoming drawing!", 1000, "", 500]}
 						loop={Infinity}
 						wrapper="h1"
 						className='title'
