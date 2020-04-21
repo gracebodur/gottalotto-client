@@ -27,7 +27,7 @@ class Welcome extends Component {
 						</div>
 						<div className='box three'>
 							<img src={red_ball} alt='lottery ball' />
-							<p className='cardContent'>Play the GottaLotto guessing game!</p>
+							<p className='cardContent'>Create an account, Log-in, and submit your guess for the next drawing coming up this Saturday night!</p>
 						</div>
 					</section>
 				</div>

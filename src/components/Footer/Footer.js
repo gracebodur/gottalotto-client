@@ -15,7 +15,7 @@ function Footer() {
 				href='https://malekadair.github.io/portfolio/'
 				target='_blank'
 				rel='noopener noreferrer'>
-				Malek Haj-Hussein
+				Malek Adair
 			</a>
 		</footer>
 	)
