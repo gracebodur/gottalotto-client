@@ -12,7 +12,7 @@ class Guess extends Component {
 					<Flippy
 						flipOnHover={true}
 						flipDirection='vertical'
-						style={{ width: '300px', height: '400px' }}
+						style={{ width: '300px', height: '300px' }}
 					>
 						<FrontSide style={{
 							backgroundColor: '#41669d',
@@ -43,10 +43,12 @@ class Guess extends Component {
 								justifyContent: 'center',
 								flexDirection: 'column'
 							}}>
-							{message}
+							<span className='backMessage'>
+								{message}
+							</span>
 							<span className='guesslistNumbers'
 								style={{
-									fontSize: '17px',
+									fontSize: '10px',
 									position: 'absolute',
 									bottom: '10px',
 									width: '100%'

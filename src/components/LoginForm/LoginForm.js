@@ -82,11 +82,11 @@ class LoginForm extends Component {
 					<button type="submit" className='login-btn'>Login</button>
 				</form>
 
-				<div>
+				<div className='loginBottom'>
 					<p className='form-link'>Need to create an account? <Link to='/register'>Register</Link></p>
-					<Link to="/" className="aButton">
+					<Link to="/" className="aButton loginBottomButton">
 						Go Back Home
-          			</Link>
+          </Link>
 				</div>
 			</section>
 		);
