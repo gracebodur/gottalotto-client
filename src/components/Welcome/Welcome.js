@@ -23,7 +23,7 @@ class Welcome extends Component {
 						</div>
 						<div className='box two'>
 							<img src={yellow_ball} alt='yellow lottery ball' />
-							<p className='cardContent'>...or share your motivational message to the world? How about promote your social media accounts?</p>
+							<p className='cardContent'>Would you like to share a motivational message to the world? How about promote your social media accounts?</p>
 						</div>
 						<div className='box three'>
 							<img src={red_ball} alt='lottery ball' />
